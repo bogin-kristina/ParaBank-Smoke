@@ -19,7 +19,7 @@ public class RegistrationPage {
 
     public boolean isRegistrationPage(){
         try{
-            By welcomeLocator = By.cssSelector("//*[@class='title']");
+            By welcomeLocator = By.cssSelector("//*[@onload='document.login.username.focus();']");
             wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeLocator));
             driver.findElement(welcomeLocator);
             return true;

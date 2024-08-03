@@ -29,6 +29,7 @@ public class LoginPage {
     }
 
     public RegistrationPage clickRegister(){
+        wait.until(ExpectedConditions.elementToBeClickable(getRegisterButton()));
         getRegisterButton().click();
         return new RegistrationPage(driver);
     }
